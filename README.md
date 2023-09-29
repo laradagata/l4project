@@ -1,4 +1,27 @@
-# Measuring QUIC performance: An analysis of connection establishment and data transfer in QUIC with comparison to TCP
-This project aims to measure the speed of establishing connections and data transfer with the QUIC transport protocol from different vantage points. It will include an analysis of the expected vs. actual behaviour of QUIC, and how it differs from that of TCP. Finally, a conclusion will derive whether there are any noteworthy advantages to using QUIC compared to TCP.
-The measurements will be taken from various vantage points in different locations across the world so as to investigate how much the speed of QUIC connections & data retrieval depends on the physical location from which the request is being made. This will be done by selecting a range of websites to establish a connection with and transfer data from (such as video/audio streaming websites), and examining the difference in speed by measuring the time it takes for communication with the site from a particular vantage point.
-Additionally, this project will include a comparison of speed for connection establishment & data transfer with QUIC and TCP & TLS. This will be analysed by taking further measurements from websites known to operate on both QUIC and TCP and comparing the results. This will include a discussion regarding the efficiency of both QUIC and TCP, based on the conclusions from these measurements. It would conclude by establishing whether QUIC offers any significant benefits in practice compared to TCP.
+# Guidance
+This is a suggested template for a project. You can modify it as you please, but
+but remember to keep:
+
+* a timelog, updated regularly in the `timelog.md` format;
+* all source under version control;
+* data well organised and with appropriate ethical approval (for human subject data);
+
+Here's an overview of the structure as it stands:
+
+* `timelog.md` The time log for your project.
+* `plan.md` A skeleton week-by-week plan for the project. 
+* `data/` data you acquire during the project
+* `src/` source code for your project
+* `status_report/` the status report submitted in December
+* `meetings/` Records of the meetings you have during the project.
+* `dissertation/` source and for your project dissertation
+* `presentation/` your presentation
+
+* Make sure you add a `.gitignore` or similar for your VCS for the tools you are using!
+* Add any appropriate continuous integration (e.g. Travis CI) in this directory.
+
+* Remove this `readme.md` file from any repository and replace it with something more appropriate!
+
+## Important
+* It should be easy to rebuild and run your project and your dissertation
+        * Include clear instructions in the relevant directories to make this possible
