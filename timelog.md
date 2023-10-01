@@ -1,9 +1,9 @@
 # Timelog
 
-* Measuring QUIC performance: An analysis of connection establishment and data transfer in QUIC with comparison to TCP
-* LARA D'AGATA
+* *Measuring QUIC performance: An analysis of connection establishment and data transfer in QUIC with comparison to TCP*
+* Lara D'Agata
 * 2526633D
-* SUPERVISOR - DR. COLIN PERKINS
+* **Supervisor** - Dr. Colin Perkins
 
 ## Week 1
 

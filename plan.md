@@ -1,11 +1,9 @@
 # Plan
 
-* PROJECT TITLE
-* YOUR NAME
-* STUDENT ID
-* SUPERVISOR NAME
-
-Week-by-week plan for the whole project. Update this as you go along.
+* *Measuring QUIC performance: An analysis of connection establishment and data transfer in QUIC with comparison to TCP*
+* Lara D'Agata
+* 2526633D
+* **Supervisor** - Dr. Colin Perkins
 
 ## Winter semester
 
