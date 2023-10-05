@@ -11,15 +11,21 @@
 
 %==============================================================================
 %% METADATA
-\title{Level 4 Project Report Template}
-\author{John H. Williamson}
-\date{September 14, 2018}
+\title{Measuring QUIC performance: An analysis of connection establishment and data transfer in QUIC with comparison to TCP}
+\author{Lara D'Agata}
+\date{\today}
 
 \maketitle
 
 %==============================================================================
 %% ABSTRACT
 \begin{abstract}
+
+This project aims to measure the speed of establishing connections and data transfer with the QUIC transport protocol from different vantage points. It will include an analysis of the expected vs. actual behaviour of QUIC, and how it differs from that of TCP. Finally, a conclusion will derive whether there are any noteworthy advantages to using QUIC compared to TCP.
+
+
+
+
     Every abstract follows a similar pattern. Motivate; set aims; describe work; explain results.
     \vskip 0.5em
     ``XYZ is bad. This project investigated ABC to determine if it was better. 
@@ -80,8 +86,11 @@
 % reset page numbering. Don't remove this!
 \pagenumbering{arabic} 
 
+QUIC is a brand new transport layer protocol which aims to effectively replace TCP as the new default for establishing connections and transferring data over the Internet. It has been an intriguing new topic of study in the past few years, with many researchers performing measurement studies not unlike this one to establish whether QUIC is really as efficient as it promises. Given that QUIC was first proposed in 2016 by Google \citep{Lang2017} and formally adopted as a standard by the IETF only in 2021 \citep{D-Lav2021} , the number of studies measuring QUIC performance are extremely limited. Recently, Internet traffic has been rapidly moving towards QUIC, and there is great demand for the rest of the Internet to do the same: it has therefore become increasingly important to perform as much research in this area as possible in order to accelerate this process. 
+This measurement study aims to help the growth of available data regarding QUIC performance, in order to hopefully see a transition to QUIC as the default transport protocol in the near future. \\
 
 Why should the reader care about what are you doing and what are you actually doing?
+
 \section{Guidance}
 
 \textbf{Motivate} first, then state the general problem clearly. 
@@ -153,6 +162,16 @@ If you are unsure about how to cite online sources, please see this guide: \url{
 
 %==================================================================================================================================
 \chapter{Background}
+
+Many studies investigating the efficiency of QUIC have been performed over the past few years. \cite{Ruth2018}  presented the first broad assessment of QUIC by probing the entire IPv4 address space, and found that many domains were capable of supporting QUIC. However, its infrastructure size does not reflect the share of Internet traffic: despite operating a similar number of QUIC-supporting IP addresses, Google accounts almost entirely for QUIC's traffic share compared to Akamai \citep{Ruth2018}.
+
+On the other hand, some studies have tried to break QUIC and find its weaknesses. These studies are just as important if not more so than those supporting QUIC: given that the transport protocol is still under development, it is essential to expand its documentation by finding bugs or other inconsistencies in its performance. One such study by \cite{Yu2021}  found that QUIC’s removal of head-of-line blocking has little impact on web-page performance in practice. They showed that, despite inherent advantages over TCP in terms of latency, versatility, and application-layer simplicity, QUIC suffers the cost of high implementation overhead, which leads to performance inconsistencies across its different implementations. This is important because it shows that the worldwide deployment of QUIC may not lead to improvements in overall network or application performance. 
+
+For the moment, it is difficult to say whether QUIC will actually have a positive impact on latency and performance across the Internet once it is deployed. However, we can keep performing research and testing out the edge cases and perhaps eventually we will reach a point where the deployment of QUIC will be nothing but beneficial to the Internet's performance needs.
+
+
+
+
 What did other people do, and how is it relevant to what you want to do?
 \section{Guidance}
 \begin{itemize}    
@@ -176,12 +195,19 @@ Make it clear how you derived the constrained form of your problem via a clear a
 
 %==================================================================================================================================
 \chapter{Design}
+
 How is this problem to be approached, without reference to specific implementation details? 
 \section{Guidance}
 Design should cover the abstract design in such a way that someone else might be able to do what you did, but with a different language or library or tool.
 
 %==================================================================================================================================
 \chapter{Implementation}
+
+
+The measurements will be taken from various vantage points in different locations across the world so as to investigate how much the speed of QUIC connections and data retrieval depends on the physical location from which the request is being made. This will be done by selecting a range of websites to establish a connection with and transfer data from (such as video/audio streaming websites), and examining the difference in speed by measuring the time it takes for communication with the site from a particular vantage point.
+
+
+
 What did you do to implement this idea, and what technical achievements did you make?
 \section{Guidance}
 You can't talk about everything. Cover the high level first, then cover important, relevant or impressive details.
@@ -418,6 +444,12 @@ See the file \texttt{guide\_to\_visualising.pdf} for further information and gui
 
 %==================================================================================================================================
 \chapter{Conclusion}    
+
+
+
+Additionally, this project will include a comparison of speed for connection establishment and data transfer with QUIC and TCP with TLS. This will be analysed by taking further measurements from websites known to operate on both QUIC and TCP and comparing the results. This will include a discussion regarding the efficiency of both QUIC and TCP, based on the conclusions from these measurements. It would conclude by establishing whether QUIC offers any significant benefits in practice compared to TCP.
+
+
 Summarise the whole project for a lazy reader who didn't read the rest (e.g. a prize-awarding committee).
 \section{Guidance}
 \begin{itemize}
@@ -475,5 +507,6 @@ submitted separately.
 \bibliographystyle{abbrvnat}
 
 \bibliography{l4proj}
+
 
 \end{document}
