@@ -17,6 +17,7 @@ Lara D'Agata (2526633D)
   * Start writing the *Background* section of the dissertation
 * **Week 3**
   * Finalise *Background* section of the dissertation
+  * Write a draft for the *Introduction* section of the dissertation
   * Contact PhD students for practical help
 * **Week 4**
 * **Week 5**
