@@ -5,6 +5,7 @@
 * 2526633D
 * **Supervisor** - Dr. Colin Perkins
 
+
 ## Week 1
 
 ### 19 Sept 2023
@@ -15,6 +16,7 @@
 
 * *1/2 hour* Meeting with supervisor
 * *1 hour* Writing first meeting minutes and uploading them to Moodle
+
 
 ## Week 2
 
@@ -33,6 +35,7 @@
 * *1 hour* Writing meeting minutes
 * *1 hour* Updating GitHub repository with timelog information
 
+
 ## Week 3
 
 ### 2 Oct 2023
@@ -42,7 +45,7 @@
 
 ### 5 Oct 2023
 
-* *3 hour* Research and finding relevant references for dissertation
+* *3 hours* Research and finding relevant references for dissertation
 * *5 hours* Write introduction and background sections of dissertation
 
 ### 6 Oct 2023
@@ -53,3 +56,22 @@
 ### 7 Oct 2023
 
 * *1 hour* Correspondence with supervisor and PhD students to arrange a meeting
+
+
+## Week 4
+
+### 9 Oct 2023
+
+* *3 hours* Meeting with PhD students for guidance regarding practical aspect of dissertation
+* *2 hours* Writing notes on what was discussed with PhD students
+  
+### 12 Oct 2023
+
+* *5 hours* Research on which QUIC implementation to study for the project
+* *1 hour* Install Wireshark and relevant tools necessary for the project
+* *3 hours* Research on how to use tcpdump or other methods for taking internet measurements
+
+### 14 Oct 2023
+
+* *2 hour* Writing email to supervisor to update about work done this week and ask for feedback
+* *1 hour* Updating GitHub repository
