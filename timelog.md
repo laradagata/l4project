@@ -75,3 +75,21 @@
 
 * *2 hour* Writing email to supervisor to update about work done this week and ask for feedback
 * *1 hour* Updating GitHub repository
+
+
+## Week 5
+  
+### 19 Oct 2023
+
+* *5 hours* Research on how to use Linux from my laptop, trying to install WSL & accessing stlinux servers
+
+### 20 Oct 2023
+
+* *1/2 hour* Meeting with supervisor
+* *1.5 hour* Writing meeting minutes and uploading them on Moodle
+* *1 hour* Trying to install WSL again
+
+### 22 Oct 2023
+
+* *1 hour* Updating GitHub repository with timelog information
+* *4 hours* Trying to install WSL again, accessing stlinux, research on dualbooting with Linux
