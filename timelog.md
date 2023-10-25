@@ -93,3 +93,16 @@
 
 * *1 hour* Updating GitHub repository with timelog information
 * *4 hours* Trying to install WSL again, accessing stlinux, research on dualbooting with Linux
+
+
+## Week 6
+  
+### 23 Oct 2023
+
+* *1.5 hours* Meeting with PhD students for guidance regarding practical aspect of dissertation
+* *1 hour* Writing notes on what was discussed with PhD students
+* *5 hours* Setting up an Ubuntu VM with VirtualBox and installing all necessary tools on it
+
+### 25 Oct 2023
+
+* *3 hours* Taking some practice measurements on the VM using tcpdump and Wireshark
