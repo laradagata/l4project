@@ -86,7 +86,7 @@
 ### 20 Oct 2023
 
 * *1/2 hour* Meeting with supervisor
-* *1.5 hour* Writing meeting minutes and uploading them on Moodle
+* *1.5 hours* Writing meeting minutes and uploading them on Moodle
 * *1 hour* Trying to install WSL again
 
 ### 22 Oct 2023
@@ -106,3 +106,34 @@
 ### 25 Oct 2023
 
 * *3 hours* Taking some practice measurements on the VM using tcpdump and Wireshark
+
+### 27 Oct 2023
+
+* *1/2 hour* Meeting with supervisor
+* *1.5 hours* Writing meeting minutes and uploading them on Moodle
+* *1 hour* Updating GitHub repository with timelog information
+
+
+## Week 7
+  
+### 30 Oct 2023
+
+* *1.5 hours* Meeting with PhD students for guidance regarding practical aspect of dissertation
+* *1 hour* Writing notes on what was discussed with PhD students
+
+### 1 Nov 2023
+
+* *2 hours* Research about qlog and how to use it
+* *3 hours* Trying to use qlog to make measurements
+
+### 2 Nov 2023
+
+* *3 hours* Writing a script to query all websites in a list and using curl on them to extract relevant data
+* *3 hours* More research on how qlog works and how to use it
+  
+### 3 Nov 2023
+
+* *1/2 hour* Meeting with supervisor
+* *1 hour* Writing meeting minutes and uploading them on Moodle
+* *4 hours* Fixing the script to use the http3 flag and enable qlog
+* *1/2 hour* Updating GitHub repository with timelog information
