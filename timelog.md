@@ -137,3 +137,23 @@
 * *1 hour* Writing meeting minutes and uploading them on Moodle
 * *4 hours* Fixing the script to use the http3 flag and enable qlog
 * *1/2 hour* Updating GitHub repository with timelog information
+
+
+## Week 8
+
+### 6 Nov 2023
+
+* *3 hours* Research on how to add qlogs to curl command in my script using the http3 tag
+* *1 hour* Implementing the ymuski/curl-http3 docker image of curl into my script
+
+### 9 Nov 2023
+
+* *4 hours* Taking practice measurements and uploading them to GitHub repo
+  
+### 10 Nov 2023
+
+* *1 hour* Writing email to supervisor to update about work done this week and ask for feedback
+
+### 11 Nov 2023
+
+* *1 hour* Updating GitHub repository with timelog information
