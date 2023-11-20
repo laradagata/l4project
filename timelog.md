@@ -157,3 +157,25 @@
 ### 11 Nov 2023
 
 * *1 hour* Updating GitHub repository with timelog information
+
+
+
+## Week 9
+
+### 13 Nov 2023
+
+* *3 hours* Trying to fix curl and tcpdump commands
+
+### 15 Nov 2023
+
+* *1 hours* Sending an email to supervisor about the 301 error on the script
+  
+### 16 Nov 2023
+
+* *1 hour* Reviewing response from supervisor, writing down questions for the next meeting
+  
+### 17 Nov 2023
+
+* *1/2 hour* Meeting with supervisor
+* *1.5 hours* Writing meeting minutes and uploading them on Moodle
+* *1 hour* Updating GitHub repository with timelog information
