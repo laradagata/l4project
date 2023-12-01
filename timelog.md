@@ -179,3 +179,40 @@
 * *1/2 hour* Meeting with supervisor
 * *1.5 hours* Writing meeting minutes and uploading them on Moodle
 * *1 hour* Updating GitHub repository with timelog information
+
+
+## Week 10
+
+### 20 Nov 2023
+
+* *3 hours* Issue with VM discovered, research on how to fix it
+
+### 22 Nov 2023
+
+* *2 hours* Writing email to supervisor to update about issue with VM and ask for feedback
+  
+
+### 24 Nov 2023
+
+* *1 hour* Correspondence with PhD students to arrange a meeting
+* *1 hour* Updating GitHub repository with timelog information
+
+
+
+## Week 11
+
+### 27 Nov 2023
+
+* *2 hours* Research on how to fix VM
+
+### 30 Nov 2023
+
+* *2 hours* Updating bash script and move tcpdump inside the loop to get data for each single URL
+* *1 hour* Writing email to PhD to students to arrange a meeting
+
+### 24 Nov 2023
+
+* *1/2 hour* Meeting with supervisor
+* *1.5 hours* Writing meeting minutes and uploading them on Moodle
+* *1 hour* Updating GitHub repository with timelog information
+* *1 hour* Correspondence with supervisor and PhD students to arrange a meeting
