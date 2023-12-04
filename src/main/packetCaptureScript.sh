@@ -17,15 +17,9 @@ while IFS= read -r line; do
 done < "$top_urls"
 
 # Directory to save the packet captures
-output_dir="/home/lara/PacketCaptures_test"
+output_dir="/home/laradagata/l4project/data/PacketCaptures_test/testdata"
 
 #mkdir -p "$output_dir"
-
-# Start tcpdump to capture QUIC network traffic
-#sudo tcpdump -n udp -SX -i any port 443
-
-# Wait for tcpdump to initialise properly
-#sleep 2
 
 for website in "${websites[@]}"; do
 	# Extract the domain to use as the filename
@@ -33,8 +27,18 @@ for website in "${websites[@]}"; do
 	
 	echo "$website"
 	
+	# Start tcpdump to capture QUIC network traffic 
+	# Backgrounding this block to establish two threads
+	{
+		sudo tcpdump -n udp -SX -i any port 443 -c 1 -w "$output_dir/$filename.pcap"
+	} &
+
+	# allow backgrounded block to start running before curl command
+	sleep 1
+	
 	# Use curl to fetch the web page
 	sudo docker run --rm ymuski/curl-http3 curl --http3 -IL "$website" > "$output_dir/$filename.html"
+	
 done
 	
 # Stop tcpdump
