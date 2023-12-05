@@ -21,6 +21,8 @@ output_dir="/home/laradagata/l4project/data/PacketCaptures_test/testdata"
 
 #mkdir -p "$output_dir"
 
+#sudo docker run --rm -it ymuski/curl-http3 whoami
+
 for website in "${websites[@]}"; do
 	# Extract the domain to use as the filename
 	filename=( $(awk -F'/' '{print $3}' <<< "$website"))
@@ -30,16 +32,23 @@ for website in "${websites[@]}"; do
 	# Start tcpdump to capture QUIC network traffic 
 	# Backgrounding this block to establish two threads
 	{
-		sudo tcpdump -n udp -SX -i any port 443 -c 1 -w "$output_dir/$filename.pcap"
+		sudo tcpdump -n udp -SX -i any port 443 -w "$output_dir/$filename.pcap"
 	} &
 
 	# allow backgrounded block to start running before curl command
 	sleep 1
 	
+	#export QLOGDIR="$output_dir" 
+	
 	# Use curl to fetch the web page
-	sudo docker run --rm ymuski/curl-http3 curl --http3 -IL "$website" > "$output_dir/$filename.html"
+	#sudo docker run -it ymuski/curl-http3 export QLOGDIR=/opt
+	sudo docker run -it --rm ymuski/curl-http3 /bin/bash -c "export QLOGDIR=/opt && curl --http3 -IL "$website" && find -type f -name '*.sqlog' | xargs cat " > "$output_dir/$filename.html"
+	#sudo docker run -it --rm ymuski/curl-http3 curl -V
+	kill -HUP %1
 	
 done
+
+#sudo docker run -it ymuski/curl-http3 ls /opt
 	
 # Stop tcpdump
 
