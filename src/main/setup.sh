@@ -11,11 +11,7 @@ sudo apt update
 sudo apt -y install gcc
 sudo apt -y install cmake
 sudo apt -y install g++
-
 sudo apt install cargo
-sudo apt install autoconf
-sudo apt install
-sudo apt-get install libtool
 
 # Install docker image
 curl -sSL https://get.docker.com/ | sudo sh
@@ -32,6 +28,3 @@ cd $HOME/quiche && cargo build --examples
 
 # Verify installation
 cd $HOME/quiche && cargo test
-
-# Run quiche-client example
-cd $HOME/quiche && cargo run --bin quiche-client -- https://cloudflare-quic.com/
