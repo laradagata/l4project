@@ -1,4 +1,4 @@
-#!/bin/bash
+o#!/bin/bash
 
 # Create list of top 1000 websites
 
@@ -9,7 +9,12 @@ websites=()
 while IFS= read -r line; do
 	# Use awk to split the line by quotation mark
 	# Store the second argument (the url) into top_urls
-	url_string=( $(awk -F, '{print "https://www."$2"/"}' <<< "$line") )
+	# If website has more than one full-stop, do not add 'www.' in front of the url
+	if echo $line | grep -q '\(\.\).*\1'; then
+		url_string=( $(awk -F, '{print "https://"$2"/"}' <<< "$line") )
+	else
+		url_string=( $(awk -F, '{print "https://www."$2"/"}' <<< "$line") )
+	fi
 
 	# Remove quotation marks from url string
 	websites+=( $(echo "$url_string" | sed 's/"//g') )  
