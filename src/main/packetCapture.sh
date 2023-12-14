@@ -2,7 +2,7 @@ o#!/bin/bash
 
 # Create list of top 1000 websites
 
-top_urls="top_urls.txt"
+top_urls="small_urls.txt"
 
 websites=()
 
@@ -48,7 +48,7 @@ for website in "${websites[@]}"; do
 	sleep 1
 	
 	# Use curl to fetch the web page
-	sudo docker run -it --rm ymuski/curl-http3 curl --http3 -IL "$website" > "$output_dir_quic/$filename/$filename-curl.html"
+	sudo docker run --rm ymuski/curl-http3 curl --http3 -IL "$website" > "$output_dir_quic/$filename/$filename-curl.html"
 	
 	# Get qlog information for the web page
 	cd $HOME/quiche && cargo run --bin quiche-client -- "$website"
