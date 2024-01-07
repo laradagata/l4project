@@ -216,3 +216,40 @@
 * *1.5 hours* Writing meeting minutes and uploading them on Moodle
 * *1 hour* Updating GitHub repository with timelog information
 * *1 hour* Correspondence with supervisor and PhD students to arrange a meeting
+
+
+## Week 12
+
+### 4 Dec 2023
+
+* *1 hours* Meeting in-person with supervisor and PhD students
+* *3 hours* Meeting with PhD students to figure out how to obtain qlog information with my script
+  
+### 5 Dec 2023
+
+* *3 hours* Figuring out how to retrieve qlog file information from the docker VM
+* *1 hour* Email correspondence with PhD students to fix the script
+
+### 8 Dec 2023
+
+* *1.5 hours* Writing meeting minutes and uploading them on Moodle
+* *1 hour* Updating GitHub repository with timelog information
+* *1 hour* Writing and sending email to supervisor to check my code before taking some preliminary measurements
+
+
+## Week 13
+
+### 12 Dec 2023
+
+* *1/2 hour* Writing and sending email to supervisor
+  
+### 14 Dec 2023
+
+* *6 hours* Taking preliminary measurements
+* *1/2 hour* Email correspondence with supervisor regarding our meeting
+
+### 15 Dec 2023
+
+* *1/2 hour* Meeting with supervisor
+* *1.5 hours* Writing meeting minutes and uploading them on Moodle
+* *1 hour* Updating GitHub repository with timelog information
