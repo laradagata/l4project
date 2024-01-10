@@ -22,8 +22,8 @@ while IFS= read -r line; do
 done < "$top_urls"
 
 # Directory to save the packet captures
-output_dir_quic="/home/laradagata/l4project/data/PacketCaptures_test/testdata/quic"
-output_dir_tcp="/home/laradagata/l4project/data/PacketCaptures_test/testdata/tcp"
+output_dir_quic="/home/laradagata/l4project/data/PacketCaptures_test/testdata_fixed/quic"
+output_dir_tcp="/home/laradagata/l4project/data/PacketCaptures_test/testdata_fixed/tcp"
 
 # Iterate over websited and gather only QUIC-related information
 for website in "${websites[@]}"; do
@@ -48,10 +48,12 @@ for website in "${websites[@]}"; do
 	sleep 1
 	
 	# Use curl to fetch the web page
-	sudo docker run --rm ymuski/curl-http3 curl --http3 -IL "$website" > "$output_dir_quic/$filename/$filename-curl.html"
+	# sudo docker run --rm ymuski/curl-http3 curl --http3 -IL "$website" > "$output_dir_quic/$filename/$filename-curl.html"
+	
+	sudo docker run --rm ymuski/curl-http3 /bin/bash -c"export QLOGDIR=/opt && curl --http3 -L "$website" && find -type f -name '*.sqlog' | xargs cat" > "$output_dir_quic/$filename/$filename-curl.sqlog"
 	
 	# Get qlog information for the web page
-	cd $HOME/quiche && cargo run --bin quiche-client -- "$website"
+	# cd $HOME/quiche && cargo run --bin quiche-client -- "$website"
 	
 	# Kill tcpdump
 	kill -HUP $1
