@@ -2,7 +2,7 @@
 
 # Create list of top 1000 websites
 
-top_urls="top_500urls.txt"
+top_urls="small_urls.txt"
 
 websites=()
 
@@ -10,20 +10,28 @@ while IFS= read -r line; do
 	# Use awk to split the line by quotation mark
 	# Store the second argument (the url) into top_urls
 	# If website has more than one full-stop, do not add 'www.' in front of the url
-	if echo $line | grep -q '\(\.\).*\1'; then
-		url_string=( $(awk -F, '{print "https://"$2"/"}' <<< "$line") )
-	else
-		url_string=( $(awk -F, '{print "https://www."$2"/"}' <<< "$line") )
-	fi
+	
+	
+	#if echo $line | grep -q '\(\.\).*\1'; then
+	#	url_string=( $(awk -F, '{print "https://"$2"/"}' <<< "$line") )
+	#else
+	#	url_string=( $(awk -F, '{print "https://www."$2"/"}' <<< "$line") )
+	#fi
+	
+	url_string=( $(awk -F, '{print "https://www."$2"/"}' <<< "$line") )
 
 	# Remove quotation marks from url string
 	websites+=( $(echo "$url_string" | sed 's/"//g') )  
 
 done < "$top_urls"
 
+for w in "${websites[@]}"; do
+	echo "$w"
+done
+
 # Directory to save the packet captures
-output_dir_quic="/home/laradagata/l4project/data/PacketCaptures_test/testdata_fixed/quic"
-output_dir_tcp="/home/laradagata/l4project/data/PacketCaptures_test/testdata_fixed/tcp"
+output_dir_quic="/home/laradagata/l4project/data/PacketCaptures_test/test_quiche-client/quic"
+output_dir_tcp="/home/laradagata/l4project/data/PacketCaptures_test/test_quiche-client/tcp"
 
 # Iterate over websited and gather only QUIC-related information
 for website in "${websites[@]}"; do
@@ -50,10 +58,10 @@ for website in "${websites[@]}"; do
 	# Use curl to fetch the web page
 	# sudo docker run --rm ymuski/curl-http3 curl --http3 -IL "$website" > "$output_dir_quic/$filename/$filename-curl.html"
 	
-	sudo docker run --rm ymuski/curl-http3 /bin/bash -c"export QLOGDIR=/opt && curl --http3 -L "$website" && find -type f -name '*.sqlog' | xargs cat" > "$output_dir_quic/$filename/$filename-curl.sqlog"
+	# sudo docker run --rm ymuski/curl-http3 /bin/bash -c"export QLOGDIR=/opt && curl --http3 -L "$website" && find -type f -name '*.sqlog' | xargs cat" > "$output_dir_quic/$filename/$filename-curl.sqlog"
 	
 	# Get qlog information for the web page
-	# cd $HOME/quiche && cargo run --bin quiche-client -- "$website"
+	cd $HOME/quiche && cargo run --bin quiche-client -- "$website"
 	
 	# Kill tcpdump
 	kill -HUP $1
