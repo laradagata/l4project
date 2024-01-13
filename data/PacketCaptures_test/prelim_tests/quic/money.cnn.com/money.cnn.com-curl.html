@@ -1,0 +1,60 @@
+HTTP/2 301 
+server: Varnish
+retry-after: 0
+location: https://www.cnn.com/business
+accept-ranges: bytes
+date: Thu, 14 Dec 2023 20:42:42 GMT
+via: 1.1 varnish
+set-cookie: SelectedEdition=www; Domain=.cnn.com; Path=/;
+set-cookie: countryCode=GB; Domain=.cnn.com; Path=/; SameSite=None; Secure
+set-cookie: stateCode=GLG; Domain=.cnn.com; Path=/; SameSite=None; Secure
+set-cookie: geoData=glasgow|GLG|g12 8qq|GB|EU|0|broadband|55.870|-4.290|826034; Domain=.cnn.com; Path=/; SameSite=None; Secure
+state: HIT-SYNTH
+x-served-by: cache-lcy-eglc8600027-LCY
+x-cache: HIT
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+content-length: 0
+
+HTTP/2 302 
+server: Varnish
+retry-after: 0
+cache-control: public, max-age=60
+location: https://edition.cnn.com/business
+accept-ranges: bytes
+date: Thu, 14 Dec 2023 20:42:43 GMT
+via: 1.1 varnish
+set-cookie: countryCode=GB; Domain=.cnn.com; Path=/; SameSite=None; Secure
+set-cookie: stateCode=GLG; Domain=.cnn.com; Path=/; SameSite=None; Secure
+set-cookie: geoData=glasgow|GLG|g12 8qq|GB|EU|0|broadband|55.870|-4.290|826034; Domain=.cnn.com; Path=/; SameSite=None; Secure
+x-served-by: cache-lcy-eglc8600038-LCY
+x-cache: HIT
+x-cache-hits: 0
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+content-length: 0
+
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+x-content-hub: build-env=prod; unique-deployment-key=rn1204cj; build-version=v4.24.13-0-g42645102ec; build-commit-hash=42645102e
+access-control-allow-origin: *
+cache-control: max-age=60
+content-security-policy: default-src 'self' blob: https://*.cnn.com:* http://*.cnn.com:* *.cnn.io:* *.cnn.net:* *.turner.com:* *.turner.io:* *.ugdturner.com:* courageousstudio.com *.vgtf.net:*; script-src 'unsafe-eval' 'unsafe-inline' 'self' *; style-src 'unsafe-inline' 'self' blob: *; child-src 'self' blob: *; frame-src 'self' *; object-src 'self' *; img-src 'self' data: blob: *; media-src 'self' data: blob: *; font-src 'self' data: *; connect-src 'self' data: *; frame-ancestors 'self' https://*.cnn.com:* http://*.cnn.com https://*.cnn.io:* http://*.cnn.io:* *.turner.com:* courageousstudio.com;
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+x-last-modified: Fri, 08 Dec 2023 14:40:14 GMT
+via: 1.1 varnish, 1.1 varnish
+accept-ranges: bytes
+date: Thu, 14 Dec 2023 20:42:43 GMT
+age: 20
+set-cookie: countryCode=GB; Domain=.cnn.com; Path=/; SameSite=None; Secure
+set-cookie: stateCode=GLG; Domain=.cnn.com; Path=/; SameSite=None; Secure
+set-cookie: geoData=glasgow|GLG|g12 8qq|GB|EU|0|broadband|55.870|-4.290|826034; Domain=.cnn.com; Path=/; SameSite=None; Secure
+set-cookie: FastAB=0=1488,1=2983,2=4496,3=9901,4=7959,5=2795,6=5754,7=9919,8=8940,9=2389,10=9529,11=2372,12=3761,13=2603,14=3164,15=4598,16=6112,17=8962,18=1361,19=3002; Domain=.cnn.com; Path=/; Expires=Fri, 13 Dec 2024 20:42:43 GMT; SameSite=Lax
+x-served-by: cache-iad-kjyo7100069-IAD, cache-lcy-eglc8600022-LCY
+x-cache: HIT, MISS
+x-cache-hits: 3, 0
+x-timer: S1702586563.474279,VS0,VE159
+vary: Accept-Encoding, Accept-Language,Origin
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+content-length: 4347581
+
