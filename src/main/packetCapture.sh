@@ -2,7 +2,7 @@
 
 # Create list of top 1000 websites
 
-top_urls="small_urls.txt"
+top_urls="top_500urls.txt"
 
 websites=()
 
@@ -36,8 +36,16 @@ done
 URL_NAME_LOOP
 
 # Directory to save the packet captures
-output_dir_quic="/home/laradagata/l4project/data/PacketCaptures_test/test/quic"
-output_dir_tcp="/home/laradagata/l4project/data/PacketCaptures_test/test/tcp"
+output_dir="/home/laradagata/l4project/data/"
+
+# Make directories to save packetCapture data into
+mkdir -p "$output_dir/packetCapture_HOME"
+mkdir -p "$output_dir/packetCapture_HOME/quic"
+mkdir -p "$output_dir/packetCapture_HOME/tcp"
+
+# Store variables for different QUIC & TCP directories 
+output_dir_quic="$output_dir/packetCapture_HOME/quic"
+output_dir_tcp="$output_dir/packetCapture_HOME/tcp"
 
 # Iterate over websited and gather only QUIC-related information
 for website in "${websites[@]}"; do
@@ -58,7 +66,7 @@ for website in "${websites[@]}"; do
 		sudo tcpdump -n udp -SX -i any port 443 -w "$output_dir_quic/$filename/$filename-tcpdump.pcap"
 	} &
 
-	# allow backgrounded block to start running before curl command
+	# allow backgrounded block to start running before querying site
 	sleep 1
 	
 	# Use curl to fetch the web page
