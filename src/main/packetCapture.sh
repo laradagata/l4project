@@ -12,26 +12,32 @@ while IFS= read -r line; do
 	# If website has more than one full-stop, do not add 'www.' in front of the url
 	
 	
-	#if echo $line | grep -q '\(\.\).*\1'; then
-	#	url_string=( $(awk -F, '{print "https://"$2"/"}' <<< "$line") )
-	#else
-	#	url_string=( $(awk -F, '{print "https://www."$2"/"}' <<< "$line") )
-	#fi
+	if echo $line | grep -q '\(\.\).*\1'; then
+		if [[ $line =~ ".co.uk" ]]; then
+			url_string=( $(awk -F, '{print "https://www."$2"/"}' <<< "$line") )
+		else
+			url_string=( $(awk -F, '{print "https://"$2"/"}' <<< "$line") )
+		fi
+	else
+		url_string=( $(awk -F, '{print "https://www."$2"/"}' <<< "$line") )
+	fi
 	
-	url_string=( $(awk -F, '{print "https://www."$2"/"}' <<< "$line") )
+	# url_string=( $(awk -F, '{print "https://"$2"/"}' <<< "$line") )
 
 	# Remove quotation marks from url string
 	websites+=( $(echo "$url_string" | sed 's/"//g') )  
 
 done < "$top_urls"
 
+<< URL_NAME_LOOP
 for w in "${websites[@]}"; do
 	echo "$w"
 done
+URL_NAME_LOOP
 
 # Directory to save the packet captures
-output_dir_quic="/home/laradagata/l4project/data/PacketCaptures_test/test_quiche-client/quic"
-output_dir_tcp="/home/laradagata/l4project/data/PacketCaptures_test/test_quiche-client/tcp"
+output_dir_quic="/home/laradagata/l4project/data/PacketCaptures_test/test/quic"
+output_dir_tcp="/home/laradagata/l4project/data/PacketCaptures_test/test/tcp"
 
 # Iterate over websited and gather only QUIC-related information
 for website in "${websites[@]}"; do
