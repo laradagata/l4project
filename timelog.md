@@ -253,3 +253,30 @@
 * *1/2 hour* Meeting with supervisor
 * *1.5 hours* Writing meeting minutes and uploading them on Moodle
 * *1 hour* Updating GitHub repository with timelog information
+
+
+## Week 14
+
+### 8 Jan 2024
+
+* *1 hour* Writing and sending email to supervisor
+* *1 hour* Research why quiche-client command is taking so long to run
+* *2 hours* Research about docker images
+  
+### 11 Jan 2024
+
+* *1/2 hour* Meeting with supervisor
+* *1.5 hours* Writing meeting minutes and uploading them on Moodle
+* *2 hours* Change the script to only perform the cargo quiche-client command
+* *1 hour* Run some measurements to test the changes in the new script
+* *1/2 hour* Write email to supervisor to update about the updates
+
+### 13 Jan 2024
+
+* *2 hours* Research why quiche-client command is taking so long to run
+* *2 hours* Fix parsing of URLs with subdomains
+
+### 14 Jan 2024
+
+* *1/2 hour* Updating GitHub repository with timelog information
+
