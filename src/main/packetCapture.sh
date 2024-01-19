@@ -2,7 +2,7 @@
 
 # Create list of top 1000 websites
 
-top_urls="top_500urls.txt"
+top_urls="small_urls.txt"
 
 websites=()
 
@@ -75,7 +75,7 @@ for website in "${websites[@]}"; do
 	# sudo docker run --rm ymuski/curl-http3 /bin/bash -c"export QLOGDIR=/opt && curl --http3 -L "$website" && find -type f -name '*.sqlog' | xargs cat" > "$output_dir_quic/$filename/$filename-curl.sqlog"
 	
 	# Get qlog information for the web page
-	cd $HOME/quiche && cargo run --bin quiche-client -- "$website"
+	cd $HOME/quiche && cargo run --bin quiche-client -- --idle-timeout 1000 "$website"
 	
 	# Kill tcpdump
 	kill -HUP $1
