@@ -68,7 +68,7 @@ for website in "${websites[@]}"; do
 	# Start tcpdump to capture QUIC network traffic 
 	# Backgrounding this block to establish two threads
 	{
-		sudo tcpdump -n udp -SX -i any dst port 443 and src port $port_num -w "$output_dir_quic/$filename/$filename-tcpdump.pcap"
+		sudo tcpdump -n udp -SX -i any port 443 and port $port_num -w "$output_dir_quic/$filename/$filename-tcpdump.pcap"
 	} &
 
 	# allow backgrounded block to start running before querying site
@@ -85,6 +85,7 @@ for website in "${websites[@]}"; do
 	# Kill tcpdump
 	kill -HUP $1
 	
+	# Increase port_num
 	port_num=$(($port_num+1))
 	echo $port_num
 done
@@ -113,6 +114,10 @@ for website in "${websites[@]}"; do
 	
 	# Kill tcpdump
 	kill -HUP $1
+	
+	# Increase port_num
+	port_num=$(($port_num+1))
+	echo $port_num
 done
 
 echo "Packet Capture Complete"
