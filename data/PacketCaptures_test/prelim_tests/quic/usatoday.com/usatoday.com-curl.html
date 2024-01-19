@@ -1,0 +1,52 @@
+HTTP/2 301 
+retry-after: 0
+location: https://www.usatoday.com/
+accept-ranges: bytes
+date: Thu, 14 Dec 2023 18:38:27 GMT
+nel: {"report_to":"default","max_age":31557600,"include_subdomains":true,"success_fraction":0.005}
+report-to: {"max_age":31557600,"include_subdomains":true,"endpoints":[{"url":"https://reporting-api.gannettinnovation.com"}]}
+x-cache: HIT
+vary: User-Agent
+content-security-policy: upgrade-insecure-requests
+strict-transport-security: max-age=63072000
+cache-control: max-age=300,private
+content-length: 0
+
+HTTP/2 302 
+retry-after: 0
+location: https://eu.usatoday.com/
+accept-ranges: bytes
+date: Thu, 14 Dec 2023 18:38:27 GMT
+set-cookie: gnt_eid=(null);domain=.usatoday.com;path=/;secure;samesite=lax;max-age=5184000;priority=high;
+set-cookie: gnt_i=18174584295735605410*786*GB~GLG;domain=.usatoday.com;path=/;samesite=lax;secure;priority=high;
+nel: {"report_to":"default","max_age":31557600,"include_subdomains":true,"success_fraction":0.005}
+report-to: {"max_age":31557600,"include_subdomains":true,"endpoints":[{"url":"https://reporting-api.gannettinnovation.com"}]}
+x-cache: HIT
+vary: User-Agent
+content-security-policy: upgrade-insecure-requests
+strict-transport-security: max-age=63072000
+cache-control: max-age=300,private
+content-length: 0
+
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+content-security-policy: upgrade-insecure-requests
+via: 1.1 varnish, 1.1 varnish
+x-robots-tag: noindex, nofollow
+gannett-debug-path: region: west ---> region: west
+gannett-debug-path-full: restarts: 0 ttl: 31536000.000 shield: false server: cache-lcy-eglc8600033-LCY path: region: east >>>> restarts: 0 ttl: 31536000.000 shield: true server: cache-fra-eddf8230126-FRA path: region: west ---> region: west
+accept-ranges: bytes
+date: Thu, 14 Dec 2023 18:38:27 GMT
+age: 23
+strict-transport-security: max-age=600
+x-served-by: cache-fra-eddf8230055-FRA, cache-lcy-eglc8600056-LCY
+x-cache: HIT, MISS
+x-cache-hits: 21, 0
+x-timer: S1702579108.656463,VS0,VE14
+set-cookie: gup_clientid=0; domain=eu.usatoday.com; max-age=-1; path=/; secure
+set-cookie: gup_clientid=0; domain=usatoday.com; max-age=-1; path=/; secure
+set-cookie: gup_anonid=0; domain=usatoday.com; max-age=-1; path=/; secure
+set-cookie: gup_lng=0; domain=usatoday.com; max-age=-1; path=/; secure
+vary: Accept-Encoding
+content-length: 170309
+
