@@ -32,6 +32,8 @@ done < "$top_urls"
 << URL_NAME_LOOP
 for w in "${websites[@]}"; do
 	echo "$w"
+	port=$(($port+1))
+	echo $port
 done
 URL_NAME_LOOP
 
@@ -46,6 +48,9 @@ mkdir -p "$output_dir/packetCapture_HOME/tcp"
 # Store variables for different QUIC & TCP directories 
 output_dir_quic="$output_dir/packetCapture_HOME/quic"
 output_dir_tcp="$output_dir/packetCapture_HOME/tcp"
+
+# Define port number
+port_num=1100
 
 # Iterate over websited and gather only QUIC-related information
 for website in "${websites[@]}"; do
@@ -63,7 +68,7 @@ for website in "${websites[@]}"; do
 	# Start tcpdump to capture QUIC network traffic 
 	# Backgrounding this block to establish two threads
 	{
-		sudo tcpdump -n udp -SX -i any port 443 -w "$output_dir_quic/$filename/$filename-tcpdump.pcap"
+		sudo tcpdump -n udp -SX -i any dst port 443 and src port $port_num -w "$output_dir_quic/$filename/$filename-tcpdump.pcap"
 	} &
 
 	# allow backgrounded block to start running before querying site
@@ -75,11 +80,13 @@ for website in "${websites[@]}"; do
 	# sudo docker run --rm ymuski/curl-http3 /bin/bash -c"export QLOGDIR=/opt && curl --http3 -L "$website" && find -type f -name '*.sqlog' | xargs cat" > "$output_dir_quic/$filename/$filename-curl.sqlog"
 	
 	# Get qlog information for the web page
-	cd $HOME/quiche && cargo run --bin quiche-client -- --idle-timeout 1000 "$website"
+	cd $HOME/quiche && cargo run --bin quiche-client -- --source-port $port_num --idle-timeout 1000 "$website"
 	
 	# Kill tcpdump
 	kill -HUP $1
 	
+	port_num=$(($port_num+1))
+	echo $port_num
 done
 
 # Iterate over websited and gather only TCP-related information
