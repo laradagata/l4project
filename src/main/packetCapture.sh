@@ -2,7 +2,7 @@
 
 # Create list of top 1000 websites
 
-top_urls="small_urls.txt"
+top_urls="top_urls.txt"
 
 websites=()
 
