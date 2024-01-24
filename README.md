@@ -1,27 +1,14 @@
-# Guidance
-This is a suggested template for a project. You can modify it as you please, but
-but remember to keep:
+# Measuring QUIC performance: An analysis of security, connection establishment, and data transfer for QUIC with comparison to TCP
 
-* a timelog, updated regularly in the `timelog.md` format;
-* all source under version control;
-* data well organised and with appropriate ethical approval (for human subject data);
+This project aims to take various measurements of Internet connections by running a bash script which queries the top 1000 websites using both QUIC and TCP, and collects the header information of all packets across these connections. The script is run from different locations in order to investigate how the speed of QUIC connections depends on the physical location from which a request is being made. Finally, the data collected is examined to compare the security and speed of connections between TCP and QUIC.
 
-Here's an overview of the structure as it stands:
+This repository contains the following files and directories: 
 
-* `timelog.md` The time log for your project.
-* `plan.md` A skeleton week-by-week plan for the project. 
-* `data/` data you acquire during the project
-* `src/` source code for your project
-* `status_report/` the status report submitted in December
-* `meetings/` Records of the meetings you have during the project.
-* `dissertation/` source and for your project dissertation
-* `presentation/` your presentation
-
-* Make sure you add a `.gitignore` or similar for your VCS for the tools you are using!
-* Add any appropriate continuous integration (e.g. Travis CI) in this directory.
-
-* Remove this `readme.md` file from any repository and replace it with something more appropriate!
-
-## Important
-* It should be easy to rebuild and run your project and your dissertation
-        * Include clear instructions in the relevant directories to make this possible
+* `timelog.md` An exact time log for the time spent on this project during the academic year.
+* `plan.md` A week-by-week plan for the project. 
+* `data/` Data acquired by running measurements over QUIC and TCP.
+* `src/` Source code for the project, containing the packet capture script.
+* `status_report/` The status report submitted in December.
+* `meetings/` Notes taken during the meetings with the supervisor, and the meeting minutes.
+* `dissertation/` The dissertation.
+* `presentation/` The presentation.
