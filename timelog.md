@@ -269,7 +269,7 @@
 * *1.5 hours* Writing meeting minutes and uploading them on Moodle
 * *2 hours* Change the script to only perform the cargo quiche-client command
 * *1 hour* Run some measurements to test the changes in the new script
-* *1/2 hour* Write email to supervisor to update about the updates
+* *1/2 hour* Write email to supervisor to inform about the updates
 
 ### 13 Jan 2024
 
@@ -278,5 +278,30 @@
 
 ### 14 Jan 2024
 
+* *1/2 hour* Updating GitHub repository with timelog information
+
+
+## Week 15
+
+### 17 Jan 2024
+
+* *1 hour* Writing and sending email to supervisor & PhD students for advice
+* *2 hour* Research on ways to debug the quiche-client command 
+  
+### 18 Jan 2024
+
+* *1 hour* Correspondence with PhD students and supervisor, in response to my email
+* *1/2 hour* Meeting with supervisor
+* *1.5 hours* Writing meeting minutes and uploading them on Moodle
+
+### 19 Jan 2024
+
+* *2 hours* Resolve issue of slow runtime for quiche-client command
+* *3 hours* Resolve issue of overlapping IPs in the pcap files for QUIC measurements
+* *1.5 hours* Starting to set up the environment for measurements on stlinux server
+
+### 21 Jan 2024
+
+* *2 hours* Resolve issue of overlapping IPs in the pcap files for TCP measurements
 * *1/2 hour* Updating GitHub repository with timelog information
 
