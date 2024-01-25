@@ -2,10 +2,18 @@
 
 # Create list of top 1000 websites
 
-top_urls="top_urls.txt"
+# top_urls="top_urls.txt"
 
 websites=()
 
+while IFS="," read -r domain 
+do
+	websites+=( $(echo $(awk -F, '{print "https://www."$domain"/"}') ) )
+	
+done < <(cut -d "," -f3 majestic_million_test.csv | tail -n +1)
+
+
+<< PARSING
 while IFS= read -r line; do
 	# Use awk to split the line by quotation mark
 	# Store the second argument (the url) into top_urls
@@ -25,26 +33,26 @@ while IFS= read -r line; do
 	websites+=( $(echo "$url_string" | sed 's/"//g') )  
 
 done < "$top_urls"
+PARSING
 
-<< URL_NAME_LOOP
+ << URL_NAME_LOOP
 for w in "${websites[@]}"; do
 	echo "$w"
-	port=$(($port+1))
-	echo $port
 done
 URL_NAME_LOOP
 
+#<< END
 # Directory to save the packet captures
 output_dir="/home/laradagata/l4project/data/"
 
 # Make directories to save packetCapture data into
-mkdir -p "$output_dir/packetCapture_HOME"
-mkdir -p "$output_dir/packetCapture_HOME/quic"
-mkdir -p "$output_dir/packetCapture_HOME/tcp"
+mkdir -p "$output_dir/packetCapture"
+mkdir -p "$output_dir/packetCapture/quic"
+mkdir -p "$output_dir/packetCapture/tcp"
 
 # Store variables for different QUIC & TCP directories 
-output_dir_quic="$output_dir/packetCapture_HOME/quic"
-output_dir_tcp="$output_dir/packetCapture_HOME/tcp"
+output_dir_quic="$output_dir/packetCapture/quic"
+output_dir_tcp="$output_dir/packetCapture/tcp"
 
 # Define initial port number
 port_num=1100
@@ -65,7 +73,7 @@ for website in "${websites[@]}"; do
 	# Start tcpdump to capture QUIC network traffic 
 	# Backgrounding this block to establish two threads
 	{
-		sudo tcpdump -n udp -SX -i any port 443 and port $port_num -w "$output_dir_quic/$filename/$filename-tcpdump.pcap"
+		sudo tcpdump -n udp -SX -i any -U port 443 and port $port_num -w "$output_dir_quic/$filename/$filename-tcpdump.pcap"
 	} &
 
 	# allow backgrounded block to start running before querying site
@@ -118,3 +126,5 @@ for website in "${websites[@]}"; do
 done
 
 echo "Packet Capture Complete"
+
+#END
