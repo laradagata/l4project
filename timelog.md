@@ -266,7 +266,7 @@
 ### 11 Jan 2024
 
 * *1/2 hour* Meeting with supervisor
-* *1.5 hours* Writing meeting minutes and uploading them on Moodle
+* *1 hour* Writing meeting minutes and uploading them on Moodle
 * *2 hours* Change the script to only perform the cargo quiche-client command
 * *1 hour* Run some measurements to test the changes in the new script
 * *1/2 hour* Write email to supervisor to inform about the updates
@@ -292,7 +292,7 @@
 
 * *1 hour* Correspondence with PhD students and supervisor, in response to my email
 * *1/2 hour* Meeting with supervisor
-* *1.5 hours* Writing meeting minutes and uploading them on Moodle
+* *1 hour* Writing meeting minutes and uploading them on Moodle
 
 ### 19 Jan 2024
 
@@ -305,3 +305,26 @@
 * *2 hours* Resolve issue of overlapping IPs in the pcap files for TCP measurements
 * *1/2 hour* Updating GitHub repository with timelog information
 
+
+## Week 16
+
+### 22 Jan 2024
+
+* *2 hours* Took measurements from home.
+  
+### 23 Jan 2024
+
+* *2 hours* Tried to clone project repository on stlinux servers.
+* *1 hour* Tried to access supervisor's university servers from VM.
+
+
+### 25 Jan 2024
+
+* *1/2 hour* Meeting with supervisor
+* *1 hour* Writing meeting minutes and uploading them on Moodle
+* *3 hours* Show outgoing packets for websites that do not support QUIC, resolving issue of empty pcap files
+* *2 hours* Changed top 1000 urls list to the one from Majestic Million, including fixed parsing in the script.
+
+### 28 Jan 2024
+
+* *1/2 hour* Updating GitHub repository with timelog information
