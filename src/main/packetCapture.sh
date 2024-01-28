@@ -1,39 +1,14 @@
 #!/bin/bash
 
-# Create list of top 1000 websites
-
-# top_urls="top_urls.txt"
-
+# Initialise list which will contain the top 1000 urls
 websites=()
 
+# Read all lines from top urls file and add each url to the websites list
 while IFS="," read -r domain 
 do
 	websites+=( $(echo $(awk -F, '{print "https://www."$domain"/"}') ) )
 	
-done < <(cut -d "," -f3 majestic_million_test.csv | tail -n +1)
-
-
-<< PARSING
-while IFS= read -r line; do
-	# Use awk to split the line by quotation mark
-	# Store the second argument (the url) into top_urls
-	# If website has more than one full-stop and does not end in '.co.uk', do not add 'www.' in front of the url
-	
-	if echo $line | grep -q '\(\.\).*\1'; then
-		if [[ $line =~ ".co.uk" ]]; then
-			url_string=( $(awk -F, '{print "https://www."$2"/"}' <<< "$line") )
-		else
-			url_string=( $(awk -F, '{print "https://"$2"/"}' <<< "$line") )
-		fi
-	else
-		url_string=( $(awk -F, '{print "https://www."$2"/"}' <<< "$line") )
-	fi
-
-	# Remove quotation marks from url string
-	websites+=( $(echo "$url_string" | sed 's/"//g') )  
-
-done < "$top_urls"
-PARSING
+done < <(cut -d "," -f3 majestic_million.csv | tail -n +1)
 
  << URL_NAME_LOOP
 for w in "${websites[@]}"; do
@@ -41,7 +16,6 @@ for w in "${websites[@]}"; do
 done
 URL_NAME_LOOP
 
-#<< END
 # Directory to save the packet captures
 output_dir="/home/laradagata/l4project/data/"
 
@@ -126,5 +100,3 @@ for website in "${websites[@]}"; do
 done
 
 echo "Packet Capture Complete"
-
-#END
