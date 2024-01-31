@@ -17,7 +17,7 @@ done
 URL_NAME_LOOP
 
 # Directory to save the packet captures
-output_dir="/home/laradagata/l4project/data/"
+output_dir="~/l4project/data/"
 
 # Make directories to save packetCapture data into
 mkdir -p "$output_dir/packetCapture"
