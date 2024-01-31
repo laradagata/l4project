@@ -17,7 +17,7 @@ done
 URL_NAME_LOOP
 
 # Directory to save the packet captures
-output_dir="~/l4project/data/"
+output_dir="/home/2526633d/l4project/data/"
 
 # Make directories to save packetCapture data into
 mkdir -p "$output_dir/packetCapture"
@@ -47,7 +47,7 @@ for website in "${websites[@]}"; do
 	# Start tcpdump to capture QUIC network traffic 
 	# Backgrounding this block to establish two threads
 	{
-		sudo tcpdump -n udp -SX -i any -U port 443 and port $port_num -w "$output_dir_quic/$filename/$filename-tcpdump.pcap"
+		tcpdump -n udp -SX -i any -U port 443 and port $port_num -w "$output_dir_quic/$filename/$filename-tcpdump.pcap"
 	} &
 
 	# allow backgrounded block to start running before querying site
@@ -82,14 +82,14 @@ for website in "${websites[@]}"; do
 	# Start tcpdump to capture TCP network traffic 
 	# Backgrounding this block to establish two threads
 	{
-		sudo tcpdump -i enp0s3 tcp port $port_num -w "$output_dir_tcp/$filename/$filename-tcpdump.pcap"
+		tcpdump -i enp0s3 tcp port $port_num -w "$output_dir_tcp/$filename/$filename-tcpdump.pcap"
 	} &
 
 	# allow backgrounded block to start running before curl command
 	sleep 1
 	
 	# Use curl to fetch the web page
-	sudo curl --local-port $port_num -D "$output_dir_tcp/$filename/$filename-curl.html" -vs "$website"
+	curl --local-port $port_num -D "$output_dir_tcp/$filename/$filename-curl.html" -vs "$website"
 	
 	# Kill tcpdump
 	kill -HUP $1
