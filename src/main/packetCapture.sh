@@ -20,13 +20,13 @@ URL_NAME_LOOP
 output_dir="/home/2526633d/l4project/data/"
 
 # Make directories to save packetCapture data into
-mkdir -p "$output_dir/packetCapture"
-mkdir -p "$output_dir/packetCapture/quic"
-mkdir -p "$output_dir/packetCapture/tcp"
+mkdir -p "$output_dir/packetCapture_campus"
+mkdir -p "$output_dir/packetCapture_campus/quic"
+mkdir -p "$output_dir/packetCapture_campus/tcp"
 
 # Store variables for different QUIC & TCP directories 
-output_dir_quic="$output_dir/packetCapture/quic"
-output_dir_tcp="$output_dir/packetCapture/tcp"
+output_dir_quic="$output_dir/packetCapture_campus/quic"
+output_dir_tcp="$output_dir/packetCapture_campus/tcp"
 
 # Define initial port number
 port_num=1100
@@ -82,7 +82,7 @@ for website in "${websites[@]}"; do
 	# Start tcpdump to capture TCP network traffic 
 	# Backgrounding this block to establish two threads
 	{
-		tcpdump -i enp0s3 tcp port $port_num -w "$output_dir_tcp/$filename/$filename-tcpdump.pcap"
+		tcpdump -i eno2 tcp port $port_num -w "$output_dir_tcp/$filename/$filename-tcpdump.pcap"
 	} &
 
 	# allow backgrounded block to start running before curl command
