@@ -328,3 +328,28 @@
 ### 28 Jan 2024
 
 * *1/2 hour* Updating GitHub repository with timelog information
+
+
+## Week 17
+
+### 29 Jan 2024
+
+* *1/2 hour* Cleaned up packetCapture script.
+* *3 hours* Took final correct measurements from home.
+  
+### 31 Jan 2024
+
+* *1 hour* Managed to access university servers from VM.
+* *3 hours* Set up the university server in order to run the script.
+* *2 hours* Took some preliminary measurements from the campus server.
+
+### 25 Jan 2024
+
+* *1/2 hour* Meeting with supervisor
+* *1 hour* Writing meeting minutes and uploading them on Moodle
+* *3 hours* Took final correct measurements from the campus server.
+
+### 3 Feb 2024
+
+* *3 hours* Research about conducting the data analysis with Python.
+* *1/2 hour* Updating GitHub repository with timelog information
