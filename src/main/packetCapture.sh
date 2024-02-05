@@ -53,12 +53,7 @@ for website in "${websites[@]}"; do
 	# allow backgrounded block to start running before querying site
 	sleep 1
 	
-	# Use curl to fetch the web page
-	# sudo docker run --rm ymuski/curl-http3 curl --http3 -IL "$website" > "$output_dir_quic/$filename/$filename-curl.html"
-	
-	# sudo docker run --rm ymuski/curl-http3 /bin/bash -c"export QLOGDIR=/opt && curl --http3 -L "$website" && find -type f -name '*.sqlog' | xargs cat" > "$output_dir_quic/$filename/$filename-curl.sqlog"
-	
-	# Get qlog information for the web page
+	# Query web page and get related qlog information
 	cd $HOME/quiche && cargo run --bin quiche-client -- --source-port $port_num --idle-timeout 1000 "$website"
 	
 	# Kill tcpdump
