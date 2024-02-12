@@ -353,3 +353,38 @@
 
 * *3 hours* Research about conducting the data analysis with Python.
 * *1/2 hour* Updating GitHub repository with timelog information
+
+
+## Week 18
+
+### 5 Feb 2024
+
+* *2 hours* Started coding data analysis
+  
+### 6 Feb 2024
+
+* *3 hours* Produced draft multi-index pandas DataFrame from qlog data.
+
+### 8 Feb 2024
+
+* *2 hour* Obtained average handshake time for qlog files
+
+### 9 Feb 2024
+
+* *1/2 hour* Meeting with supervisor
+* *1 hour* Writing meeting minutes and uploading them on Moodle
+
+### 10 Feb 2024
+
+* *2 hours* Generated distribution plot for handshake times for QUIC
+* *3 hours* Showed how many tls handshake failed errors occurred.
+* *2 hours* Showed how many tls ciphers are established.
+
+### 11 Feb 2024
+
+* *2 hours* Fixed histogram for handshake time
+* *2 hours* Added campus data to error and tls encryption information
+* *3 hours* Generated graph for visualising handshake time from data taken from campus
+* *1 hour* Fixed error output visualisation
+* *1/2 hour* Updating GitHub repository with timelog information
+
