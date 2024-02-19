@@ -388,3 +388,28 @@
 * *1 hour* Fixed error output visualisation
 * *1/2 hour* Updating GitHub repository with timelog information
 
+
+## Week 19
+
+### 13 Feb 2024
+
+* *3 hours* Worked on identifying and extracting data from pcap files
+  
+### 14 Feb 2024
+
+* *2 hours* Worked on displaying the information from the TCP data packets
+
+### 15 Feb 2024
+
+* *4 hours* Calculated handshake times for TCP data
+* *1 hour* Generated handshake time distribution graph for TCP data
+
+### 16 Feb 2024
+
+* *1/2 hour* Meeting with supervisor
+* *1 hour* Writing meeting minutes and uploading them on Moodle
+
+### 18 Feb 2024
+
+* *1/2 hour* Updating GitHub repository with timelog information
+
