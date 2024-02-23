@@ -89,6 +89,8 @@ for website in "${websites[@]}"; do
 	# Kill tcpdump
 	kill -HUP $1
 	
+	#python3 tls.py ${website:8}
+	
 	# Increase port_num
 	port_num=$(($port_num+1))
 	echo $port_num
