@@ -31,7 +31,7 @@ output_dir_tcp="$output_dir/packetCapture_campus/tcp"
 # Define initial port number
 port_num=1100
 
-# Iterate over websited and gather only QUIC-related information
+# Iterate over websites and gather only QUIC-related information
 for website in "${websites[@]}"; do
 
 	# Extract the domain to use as the filename
@@ -50,7 +50,7 @@ for website in "${websites[@]}"; do
 		tcpdump -n udp -SX -i any -U port 443 and port $port_num -w "$output_dir_quic/$filename/$filename-tcpdump.pcap"
 	} &
 
-	# allow backgrounded block to start running before querying site
+	# Allow backgrounded block to start running before querying site
 	sleep 1
 	
 	# Query web page and get related qlog information
@@ -64,7 +64,7 @@ for website in "${websites[@]}"; do
 	echo $port_num
 done
 
-# Iterate over websited and gather only TCP-related information
+# Iterate over websites and gather only TCP-related information
 for website in "${websites[@]}"; do
 
 	# Extract the domain to use as the filename
@@ -80,7 +80,7 @@ for website in "${websites[@]}"; do
 		tcpdump -i eno2 tcp port $port_num -w "$output_dir_tcp/$filename/$filename-tcpdump.pcap"
 	} &
 
-	# allow backgrounded block to start running before curl command
+	# Allow backgrounded block to start running before curl command
 	sleep 1
 	
 	# Use curl to fetch the web page
@@ -88,9 +88,7 @@ for website in "${websites[@]}"; do
 	
 	# Kill tcpdump
 	kill -HUP $1
-	
-	#python3 tls.py ${website:8}
-	
+		
 	# Increase port_num
 	port_num=$(($port_num+1))
 	echo $port_num
