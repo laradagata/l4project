@@ -413,3 +413,40 @@
 
 * *1/2 hour* Updating GitHub repository with timelog information
 
+
+## Week 20
+
+### 20 Feb 2024
+
+* *1 hour* Generated graphs for TLS handshake in QUIC.
+* *3 hours* Tried to find TLS-related packet infotmation in TCP data.
+  
+### 21 Feb 2024
+
+* *3 hours* Generated pandas dataframe for connection errors and TLS ciphers.
+* *2 hours* Generated graphs for connection establishment handsahke duration in TCP data.
+
+### 22 Feb 2024
+
+* *1/2 hour* Meeting with supervisor
+* *1 hour* Writing meeting minutes and uploading them on Moodle
+
+### 23 Feb 2024
+
+* *2 hours* Edited python script to retrieve TLS information from a connection, for possibly taking the measurements again. 
+
+### 24 Feb 2024
+
+* *3 hours* Managed to retrieve TLS data from the python script.
+* *2 hours* Got TLS versions and ciphers for TCP data.
+* *2 hours* Got TLS handshake information for TCP data, along with all relevant alert messages.
+
+### 25 Feb 2024
+
+* *1 hour* Generated overlapping graphs for handshake duration and time before data transfer
+* *3 hours* Tried to get RTTs from QUIC and TCP data.
+* *1 hour* Fixed graph layouts/colours.
+* *2 hours* Made all tables in LateX, added graphs as images, and code as listing.
+* *3 hours* Started writing Results section: dividing it up into subsections, wrote about connection establishment handshakes.
+* *1/2 hour* Updating GitHub repository with timelog information
+
