@@ -450,3 +450,29 @@
 * *3 hours* Started writing Results section: dividing it up into subsections, wrote about connection establishment handshakes.
 * *1/2 hour* Updating GitHub repository with timelog information
 
+
+## Week 21
+
+### 26 Feb 2024
+
+* *2 hours* Calculated RTT data for TCP connections.
+* *2 hours* Calculated RTT data for QUIC connections.
+* *1 hour* Generate graph to display RTT data.
+  
+### 27 Feb 2024
+
+* *6 hours* Write Results section of dissertation.
+* *3 hours* Generated graphs to show difference between connection establishment and security handshakes
+* *2 hours* Fixed all graphs for LateX.
+
+### 29 Feb 2024
+
+* *1/2 hour* Meeting with supervisor
+* *1 hour* Writing meeting minutes and uploading them on Moodle
+* *3 hours* Started doing more research for the background section
+
+### 2 Mar 2024
+
+* *3 hours* More research for the background section.
+* *2 hours* Started writing Background section about Internet measurements.
+* *1/2 hour* Updating GitHub repository with timelog information
