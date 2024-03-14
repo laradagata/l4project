@@ -476,3 +476,42 @@
 * *3 hours* More research for the background section.
 * *2 hours* Started writing Background section about Internet measurements.
 * *1/2 hour* Updating GitHub repository with timelog information
+
+
+## Week 22
+
+### 4 Mar 2024
+
+* *5 hours* Research and reading to prepare for writing the Background section.
+* *3 hours* Wrote Background section.
+  
+### 5 Mar 2024
+
+* *3 hours* Wrote a draft of the Analysis & Requirements section of dissertation.
+
+### 6 Mar 2024
+
+* *1 hour* Made a diagram of TCP/TLS vs QUIC connections for Background section.
+* *2 hours* Made graph showing difference in time to data transfer to add to the Appendix.
+* *3 hours* Started writing Experimental design section of dissertation.
+
+### 7 Mar 2024
+
+* *1/2 hour* Meeting with supervisor
+* *1 hour* Writing meeting minutes and uploading them on Moodle
+
+### 10 Mar 2024
+* *3 hours* Fixed analysis and requirements section, and background.
+* *2 hours* Fixed the results section to add info about the lack of support for QUIC.
+* *1 hour* Proofreading, fixing references.
+* *1/2 hour* Updating GitHub repository with timelog information
+
+
+
+## Week 23
+
+### 12 Mar 2024
+
+* *4 hours* Wrote Introduction and Conclusion sections.
+* *1/2 hour* Wrote Abstract for the paper.
+* *1/2 hour* Sent email to supervisor to look over the final draft.
