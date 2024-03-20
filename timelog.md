@@ -515,3 +515,40 @@
 * *4 hours* Wrote Introduction and Conclusion sections.
 * *1/2 hour* Wrote Abstract for the paper.
 * *1/2 hour* Sent email to supervisor to look over the final draft.
+
+### 14 Mar 2024
+
+* *4 hours* Proofreading, rewriting some sections of dissertation.
+
+### 16 Mar 2024
+
+* *2 hours* Rearranged some parts of the structure for the dissertation.
+
+### 17 Mar 2024
+
+* *3 hours* Fixed graphs for data analysis.
+* *2 hour* Started working on Presentation powerpoint.
+* *1/2 hour* Updating GitHub repository with timelog information.
+
+
+## Week 24
+
+### 18 Mar 2024
+
+* *2 hours* Added IP and UDP information in Background section.
+* *3 hours* Adapted Requirements section according to supervisor's advice.
+* *1 hour* Added tcpdump info in Experimental Design section, rearranging so everything is introduced and explained before it is mentioned in the context of the experiment.
+
+### 19 Mar 2024
+
+* *3 hours* Fixed Results section for difference in time taken to transfer data, using summary graph showing TTFB for domains instead of URLs.
+* *3 hours* Fixed graph axes on all visualisations.
+* *2 hours* Fixed graphs for Appendices, formatted references for better capitalisation of terms.
+* *1/2 hour* Generated summary graph of appendix.
+
+### 20 Mar 2024
+
+* *3 hours* Finishing Presentation powerpoint.
+* *2 hours* Filming Presentation video.
+* *2 hours* Sorting the structure of the GitHub repository.
+* *1/2 hour* Updating GitHub repository with timelog information.
