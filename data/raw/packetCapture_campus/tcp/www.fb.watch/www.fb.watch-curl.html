@@ -1,0 +1,13 @@
+HTTP/2 302 
+location: https://www.facebook.com/watch/
+reporting-endpoints: coop_report="https://www.facebook.com/browser_reporting/coop/?minimize=0", coep_report="https://www.facebook.com/browser_reporting/coep/?minimize=0"
+report-to: {"max_age":2592000,"endpoints":[{"url":"https:\/\/www.facebook.com\/browser_reporting\/coop\/?minimize=0"}],"group":"coop_report","include_subdomains":true}, {"max_age":86400,"endpoints":[{"url":"https:\/\/www.facebook.com\/browser_reporting\/coep\/?minimize=0"}],"group":"coep_report"}
+cross-origin-embedder-policy-report-only: require-corp;report-to="coep_report"
+cross-origin-opener-policy: same-origin-allow-popups;report-to="coop_report"
+strict-transport-security: max-age=31536000; preload; includeSubDomains
+content-type: text/html; charset="utf-8"
+x-fb-debug: PQAGdTKmS2/Jy2x+0/MDp+U592NR5d7NfyDc7lsvWrEmhj27oKkA0cxQTDf3yUA/d6fABZIIKWk6qvkqg1s+bg==
+content-length: 0
+date: Thu, 01 Feb 2024 13:32:35 GMT
+alt-svc: h3=":443"; ma=86400
+
