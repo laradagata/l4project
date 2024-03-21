@@ -1,6 +1,8 @@
-# Measuring QUIC performance: An analysis of security, connection establishment, and data transfer for QUIC with comparison to TCP
+# Measuring QUIC Performance: An analysis of Security and Connection Establishment in QUIC with comparison to TCP
 
-This project aims to take various measurements of Internet connections by running a bash script which queries the top 1000 websites using both QUIC and TCP, and collects the header information of all packets across these connections. The script is run from different locations in order to investigate how the speed of QUIC connections depends on the physical location from which a request is being made. Finally, the data collected is examined to compare the security and speed of connections between TCP and QUIC.
+QUIC is a new transport layer protocol which has been in development since 2016, and has recently been deployed and finalised by the IETF in 2021 (Iyengar and Thomson 2021). Consequently, there are not many studies available which analyse the performance of QUIC, and even less studies which take active measurements in a non-closed testing environment. Moreover,
+only a handful of papers explore the differences between QUIC and TCP, which is the most widespread transport protocol over the Internet currently. In order to bridge the gap between the deployment of QUIC and its related research, a measurement study has been performed by querying the top 1000 most popular URLs using both QUIC and TCP from multiple vantage points. The experiment conducted in this project is among the first to investigate the effects of the QUIC transport protocol on the establishment speed and security of connections, and comparing QUIC to the more widely-used transport protocol, TCP. The results presented in this study show that QUIC generally performs better than TCP in most aspects of connection establishment. However, the difference between QUIC and TCP performance is not as large as QUIC promises, with TCP often performing better than QUIC in high latency networks.
+
 
 This repository contains the following files and directories: 
 

@@ -4,38 +4,49 @@ Put a brief description of your code here. This should at least describe the fil
 
 ## Build instructions
 
-**You must** include the instructions necessary to build and deploy this project successfully. If appropriate, also include 
-instructions to run automated tests. 
-
 ### Requirements
 
-List the all of the pre-requisites software required to set up your project (e.g. compilers, packages, libraries, OS, hardware)
+The pre-requisites to set up the data collection aspect of this project are as follows.
 
-For example:
+* VM created with Oracle Virtualbox Platform using Linux 6.5.0 kernel of Ubuntu 22.04
+* Windows 11 host machine
 
-* Python 3.7
-* Packages: listed in `requirements.txt` 
-* Tested on Windows 10
+The requirements necessary to set up the data analysis aspect of the project are as follows.
 
-or another example:
+* Python 3.11.1
+* Packages listed in `requirements.txt`
 
-* Requires Raspberry Pi 3 
-* a Linux host machine with the `arm-none-eabi` toolchain (at least version `x.xx`) installed
-* a working LuaJIT installation > 2.1.0
+### Build Packet Capture Script
 
-### Build steps
+To install the necessary dependencies for running the packet capture script on a Linux VM, run the following command on a Linux terminal.
 
-List the steps required to build software. 
 
-Hopefully something simple like `pip install -e .` or `make` or `cd build; cmake ..`. In
-some cases you may have much more involved setup required.
+```
+cd ~/l4project/src/main && ./setup.sh
+```
 
-### Test steps
+### Build Data Analysis Notebook
 
-List steps needed to show your software works. This might be running a test suite, or just starting the program; but something that could be used to verify your code is working correctly.
+To install the necessary requirements to run the data analysis Jupyter Notebook file, run the following commands on a Windows terminal.
 
-Examples:
+NB: Replace `<local_directory>` with the path on your local machine where this repository has been cloned.
 
-* Run automated tests by running `pytest`
-* Start the software by running `bin/editor.exe` and opening the file `examples/example_01.bin`
+```
+cd <local_directory>/l4project/data/notebooks
+pip install -r requirements.txt
+```
+
+To retrieve TLS information from the *pcap* files, it is necessary to clone the `ssl_tls` branch of the *scapy* repository with the following command.
+
+```
+git clone -b py3compat https://github.com/tintinweb/scapy-ssl_tls
+```
+
+### Run Packet Capture
+
+To run the packet capture script and collect data relating to the URLs in `majestic_million.csv`, run the following command on a Linux terminal.
+
+```
+cd ~/l4project/src/main && ./packetCapture.sh
+```
 
