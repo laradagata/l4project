@@ -1,6 +1,7 @@
 # Readme
 
-The structure of the code is as follows:
+The structure of the `src/` folder of this repository is as follows:
+
 * `main/` contains the code needed to run the packet capture for this project, the list of top URLs, and the setup scripts to install all necessary dependencies.
   * `packetCapture.sh` can be run to perform the packet capture.
   * `majestic_million.csv` contains the list of top 1000 URLs which are queried in the packet capture script.
