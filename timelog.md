@@ -551,4 +551,11 @@
 * *3 hours* Finishing Presentation powerpoint.
 * *2 hours* Filming Presentation video.
 * *2 hours* Sorting the structure of the GitHub repository.
+
+### 20 Mar 2024
+
+* *3 hours* Proofread final version of dissertation.
+* *1 hour* Re-film the presentation video.
+* *2 hours* Finish sorting the structure of the GitHub repository.
 * *1/2 hour* Updating GitHub repository with timelog information.
+* *1/2 hour* Submit Dissertation on Moodle.
