@@ -8,7 +8,7 @@ This repository contains the following files and directories:
 
 * `timelog.md` An exact time log for the time spent on this project during the academic year.
 * `plan.md` A week-by-week plan for the project. 
-* `data/` Data acquired by running measurements over QUIC and TCP.
+* `data/` Data acquired by running measurements over QUIC and TCP, and the data analysis script for generating visualisations from the data collected.
 * `src/` Source code for the project, containing the packet capture script.
 * `status_report/` The status report submitted in December.
 * `meetings/` Notes taken during the meetings with the supervisor, and the meeting minutes.
