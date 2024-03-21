@@ -22,7 +22,7 @@ To install the necessary dependencies for running the packet capture script on a
 
 
 ```
-cd ~/l4project/src/main && ./setup.sh
+cd ~/l4project/src/main/setup && ./setup.sh
 ```
 
 ### Build Data Analysis Notebook
@@ -32,7 +32,7 @@ To install the necessary requirements to run the data analysis Jupyter Notebook 
 NB: Replace `<local_directory>` with the path on your local machine where this repository has been cloned.
 
 ```
-cd <local_directory>/l4project/data/notebooks
+cd <local_directory>/l4project/src/main/setup
 pip install -r requirements.txt
 ```
 

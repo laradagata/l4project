@@ -13,4 +13,4 @@ This repository contains the following files and directories:
 * `status_report/` The status report submitted in December.
 * `meetings/` Notes taken during the meetings with the supervisor, and the meeting minutes.
 * `dissertation/` The dissertation.
-* `presentation/` The presentation.
+* `presentation/` The presentation video and PowerPoint slides used.
