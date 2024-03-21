@@ -1,4 +1,4 @@
-# User manual 
+# ReadMe
 
 The structure of the `src/` folder of this repository is as follows:
 
